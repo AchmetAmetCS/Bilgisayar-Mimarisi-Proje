@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hamming SEC-DED Simülatörü</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Hamming SEC-DED Simülatörü</h1>
+    <label for="bit-length">Bit Uzunluğu:</label>
+    <select id="bit-length">
+      <option value="8">8 bit</option>
+      <option value="16">16 bit</option>
+      <option value="32">32 bit</option>
+    </select>
+
+    <label for="data-input">Veri (binary):</label>
+    <input type="text" id="data-input" placeholder="Örn: 11001100" />
+
+    <div class="buttons">
+      <button onclick="writeToMemory()">Belleğe Yaz</button>
+      <button onclick="injectError()">Rastgele Hata Ekle</button>
+      <button onclick="checkAndCorrect()">Kontrol Et</button>
+    </div>
+
+    <div class="output">
+      <p><strong>Kodlanmış Veri:</strong> <span id="encoded-output">-</span></p>
+      <p><strong>Hatalı Veri:</strong> <span id="error-output">-</span></p>
+      <p><strong>Sonuç:</strong> <span id="result-output">-</span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
